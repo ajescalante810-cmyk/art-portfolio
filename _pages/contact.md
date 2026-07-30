@@ -2,7 +2,7 @@
 layout: single
 title: Contact
 permalink: /contact/
-author_profile: true
+author_profile: false
 hide_pagination: true
 ---
 
