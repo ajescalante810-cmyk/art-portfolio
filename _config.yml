@@ -31,14 +31,15 @@ defaults:
       path: "_gallery"
       type: gallery
     values:
-      layout: single
-      author_profile: true
-      share: true
+      layout: portfolio-piece
 
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   gallery:
     output: true
-    permalink: /gallery/:path/
+    permalink: /paintings/:path/
 
 exclude:
   - Gemfile

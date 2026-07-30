@@ -1,0 +1,170 @@
+* {
+  font-family: "Times New Roman", Times, serif !important;
+  font-weight: 800 !important;
+}
+
+.greedy-nav a {
+  font-size: 0.8rem !important;
+}
+
+.portfolio-piece {
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.portfolio-piece__info {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 2rem;
+  order: 1;
+}
+
+.portfolio-piece__image-wrap {
+  flex: 2 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  order: 2;
+}
+
+.portfolio-piece__image-wrap a {
+  display: block;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.portfolio-piece__image {
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.portfolio-piece__image--la-choza-de-azucar {
+  max-width: 115%;
+  max-height: 95vh;
+}
+
+.portfolio-piece__title {
+  margin: 0 0 0.5rem;
+}
+
+.portfolio-piece__meta {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.portfolio-piece__next {
+  display: inline-block;
+  text-decoration: underline;
+  font-weight: 600;
+  color: #000 !important;
+}
+
+@media (max-width: 600px) {
+  .portfolio-piece,
+  .painting-block {
+    flex-wrap: wrap;
+  }
+  .portfolio-piece__info,
+  .painting-block .portfolio-piece__info {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .portfolio-piece__image-wrap,
+  .painting-block .portfolio-piece__image-wrap {
+    flex-basis: 100%;
+  }
+}
+
+.paintings-scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+.painting-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.painting-block .portfolio-piece__info {
+  order: 1 !important;
+}
+
+.painting-block .portfolio-piece__image-wrap {
+  order: 2 !important;
+}
+
+.painting-block:last-child {
+  border-bottom: none;
+}
+
+.paintings-index__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.paintings-index__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.paintings-index__item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #fff;
+}
+
+.paintings-index__item,
+.paintings-index__title {
+  color: #000 !important;
+}
+
+.paintings-index__title {
+  text-align: center;
+}
+
+.paintings-index__empty {
+  color: #767676;
+}
+
+.paintings-years {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.paintings-years__link {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.paintings-years__link:hover {
+  text-decoration: underline;
+}
+
+.pagination--pager {
+  color: #000 !important;
+}

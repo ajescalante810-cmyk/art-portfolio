@@ -1,16 +1,11 @@
 ---
+layout: portfolio-piece
 title: "Fallen Angels (After Beccafumi)"
-excerpt: "Oil on canvas, 20x20 inches, 2026. Sold."
+year: "2026"
+medium: "Oil on canvas"
+dimensions: "20 x 20 inches"
+price: "Sold"
+order: 1
 header:
   teaser: /assets/images/fallen-angels-2026.jpg
-gallery:
-  - url: /assets/images/fallen-angels-2026.jpg
-    image_path: /assets/images/fallen-angels-2026.jpg
-    alt: "Fallen Angels (After Beccafumi)"
 ---
-
-**Fallen Angels (After Beccafumi)**
-Oil on canvas, 20x20 inches, 2026
-Sold
-
-{% include gallery %}

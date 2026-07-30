@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{% assign sorted = site.gallery | sort: 'order' %}
+{% assign current_index = 0 %}
+{% for item in sorted %}
+  {% if item.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign next_index = current_index | plus: 1 %}
+{% if next_index >= sorted.size %}
+  {% assign next_index = 0 %}
+{% endif %}
+{% assign next_piece = sorted[next_index] %}
+
+<div class="portfolio-piece">
+  <div class="portfolio-piece__info">
+    <h1 class="portfolio-piece__title">{{ page.title }}</h1>
+    <p class="portfolio-piece__meta">
+      {{ page.year }}<br>
+      {{ page.medium }}<br>
+      {{ page.dimensions }}<br>
+      {{ page.price }}
+    </p>
+    {% if next_piece %}
+      <a class="portfolio-piece__next" href="{{ next_piece.url | relative_url }}">Next: {{ next_piece.title }} &rarr;</a>
+    {% endif %}
+  </div>
+  <div class="portfolio-piece__image-wrap">
+    <a href="{{ page.header.teaser | relative_url }}" target="_blank" rel="noopener">
+      <img class="portfolio-piece__image" src="{{ page.header.teaser | relative_url }}" alt="{{ page.title }}">
+    </a>
+  </div>
+</div>

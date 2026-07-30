@@ -1,0 +1,16 @@
+<div class="painting-block">
+  <div class="portfolio-piece__info">
+    <h2 class="portfolio-piece__title">{{ include.piece.title }}</h2>
+    <p class="portfolio-piece__meta">
+      {{ include.piece.year }}<br>
+      {{ include.piece.medium }}<br>
+      {{ include.piece.dimensions }}<br>
+      {{ include.piece.price }}
+    </p>
+  </div>
+  <div class="portfolio-piece__image-wrap">
+    <a href="{{ include.piece.header.teaser | relative_url }}" target="_blank" rel="noopener">
+      <img class="portfolio-piece__image portfolio-piece__image--{{ include.piece.slug }}" src="{{ include.piece.header.teaser | relative_url }}" alt="{{ include.piece.title }}">
+    </a>
+  </div>
+</div>

@@ -1,16 +1,11 @@
 ---
+layout: portfolio-piece
 title: "We All Fall Down!"
-excerpt: "Oil on canvas, 47x47 inches, 2026. $2,850."
+year: "2026"
+medium: "Oil on canvas"
+dimensions: "47 x 47 inches"
+price: "For inquiries, contact the artist"
+order: 2
 header:
   teaser: /assets/images/we-all-fall-down-2026.jpg
-gallery:
-  - url: /assets/images/we-all-fall-down-2026.jpg
-    image_path: /assets/images/we-all-fall-down-2026.jpg
-    alt: "We All Fall Down!"
 ---
-
-**We All Fall Down!**
-Oil on canvas, 47x47 inches, 2026
-$2,850
-
-{% include gallery %}

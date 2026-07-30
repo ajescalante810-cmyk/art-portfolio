@@ -3,4 +3,4 @@ layout: home
 title: Welcome
 ---
 
-Welcome to my art portfolio. Browse the [gallery](/gallery/) to see my work.
+Welcome to my art portfolio. Browse the [paintings]({{ '/paintings/' | relative_url }}) to see my work.
