@@ -1,0 +1,46 @@
+title: Alexander Escalante Art
+name: Alexander Escalante
+description: Paintings by Alexander (AJ) Escalante
+url: "https://ajescalante810-cmyk.github.io"
+baseurl: "/art-portfolio"
+
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-include-cache
+
+markdown: kramdown
+locale: en-US
+
+author:
+  name: "Alexander Escalante"
+  bio: "Painter working at the intersection of memory and material."
+
+layout: single
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+  - scope:
+      path: "_gallery"
+      type: gallery
+    values:
+      layout: single
+      author_profile: true
+      share: true
+
+collections:
+  gallery:
+    output: true
+    permalink: /gallery/:path/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
