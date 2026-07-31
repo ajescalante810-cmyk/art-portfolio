@@ -17,6 +17,9 @@ layout: default
 <div class="portfolio-piece">
   <div class="portfolio-piece__info">
     <h1 class="portfolio-piece__title">{{ page.title }}</h1>
+    {% if page.note %}
+      <p class="portfolio-piece__note">{{ page.note }}</p>
+    {% endif %}
     <p class="portfolio-piece__meta">
       {{ page.year }}<br>
       {{ page.medium }}<br>

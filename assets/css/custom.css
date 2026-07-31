@@ -5,6 +5,23 @@
 
 .greedy-nav a {
   font-size: 0.8rem !important;
+  color: #000 !important;
+}
+
+.site-title {
+  color: #000 !important;
+}
+
+.home-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-hero img {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  display: inline-block;
 }
 
 .portfolio-piece {
@@ -53,6 +70,11 @@
 
 .portfolio-piece__title {
   margin: 0 0 0.5rem;
+}
+
+.portfolio-piece__note {
+  margin: 0 0 0.5rem;
+  font-style: italic;
 }
 
 .portfolio-piece__meta {

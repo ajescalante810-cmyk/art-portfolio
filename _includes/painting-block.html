@@ -1,6 +1,9 @@
 <div class="painting-block">
   <div class="portfolio-piece__info">
     <h2 class="portfolio-piece__title">{{ include.piece.title }}</h2>
+    {% if include.piece.note %}
+      <p class="portfolio-piece__note">{{ include.piece.note }}</p>
+    {% endif %}
     <p class="portfolio-piece__meta">
       {{ include.piece.year }}<br>
       {{ include.piece.medium }}<br>
