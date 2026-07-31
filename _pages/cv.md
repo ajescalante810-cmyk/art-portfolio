@@ -30,6 +30,16 @@ hide_pagination: true
 .page__content .frozen-text {
   margin-left: 27px;
 }
+
+@media (max-width: 600px) {
+  .page__content .frozen-box-0 {
+    position: static;
+    margin: 0 0 1.5rem;
+  }
+  .page__content .frozen-text {
+    margin-left: 0;
+  }
+}
 </style>
 
 <div class="page-stack frozen-box-0">
