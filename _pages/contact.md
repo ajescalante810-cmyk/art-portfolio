@@ -9,8 +9,12 @@ hide_pagination: true
 <style>
 .page__content a { color: #000 !important; }
 #page-title { display: none; }
-.page__content, .page__content ul { text-align: center; }
-.page__content ul { list-style-position: inside; padding-left: 0; }
+.page__content { text-align: center; }
+.page__content ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 auto;
+}
 .contact-heading { font-size: 2.5rem; margin-bottom: 1rem; }
 </style>
 
