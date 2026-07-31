@@ -31,7 +31,7 @@ hide_pagination: true
   margin-left: 27px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   .page__content .frozen-box-0 {
     position: static;
     margin: 0 0 1.5rem;

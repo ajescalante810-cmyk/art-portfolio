@@ -170,7 +170,7 @@ body.edit-mode .page__content > * {
   right: 1rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   .portfolio-piece__overlay {
     position: static;
     max-width: 100%;
