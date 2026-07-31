@@ -3,6 +3,12 @@
   font-weight: 800 !important;
 }
 
+img {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
 .greedy-nav a {
   font-size: 0.8rem !important;
   color: #000 !important;

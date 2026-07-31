@@ -1,1 +1,9 @@
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('img').forEach(function (img) {
+    img.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+    img.setAttribute('draggable', 'false');
+  });
+});
+</script>
