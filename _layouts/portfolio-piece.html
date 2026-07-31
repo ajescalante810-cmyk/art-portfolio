@@ -14,8 +14,24 @@ layout: default
 {% endif %}
 {% assign next_piece = sorted[next_index] %}
 
+{% assign previous_index = current_index | minus: 1 %}
+{% if previous_index < 0 %}
+  {% assign previous_index = sorted.size | minus: 1 %}
+{% endif %}
+{% assign previous_piece = sorted[previous_index] %}
+
 <div class="portfolio-piece">
-  <div class="portfolio-piece__info">
+  {% if previous_piece and sorted.size > 1 %}
+    <a class="portfolio-piece__arrow portfolio-piece__arrow--prev" href="{{ previous_piece.url | relative_url }}" aria-label="Previous artwork: {{ previous_piece.title }}">&#8249;</a>
+  {% endif %}
+  {% if next_piece and sorted.size > 1 %}
+    <a class="portfolio-piece__arrow portfolio-piece__arrow--next" href="{{ next_piece.url | relative_url }}" aria-label="Next artwork: {{ next_piece.title }}">&#8250;</a>
+  {% endif %}
+
+  <a class="portfolio-piece__image-link" href="{{ page.header.teaser | relative_url }}" target="_blank" rel="noopener">
+    <img class="portfolio-piece__image" src="{{ page.header.teaser | relative_url }}" alt="{{ page.title }}">
+  </a>
+  <div class="portfolio-piece__overlay">
     <h1 class="portfolio-piece__title">{{ page.title }}</h1>
     {% if page.note %}
       <p class="portfolio-piece__note">{{ page.note }}</p>
@@ -26,13 +42,5 @@ layout: default
       {{ page.dimensions }}<br>
       {{ page.price }}
     </p>
-    {% if next_piece %}
-      <a class="portfolio-piece__next" href="{{ next_piece.url | relative_url }}">Next: {{ next_piece.title }} &rarr;</a>
-    {% endif %}
-  </div>
-  <div class="portfolio-piece__image-wrap">
-    <a href="{{ page.header.teaser | relative_url }}" target="_blank" rel="noopener">
-      <img class="portfolio-piece__image" src="{{ page.header.teaser | relative_url }}" alt="{{ page.title }}">
-    </a>
   </div>
 </div>

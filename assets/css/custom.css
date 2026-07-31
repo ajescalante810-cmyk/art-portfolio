@@ -86,52 +86,44 @@ body.edit-mode .page__content > * {
 }
 
 .portfolio-piece {
+  position: relative;
   margin-bottom: 0;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 2rem;
 }
 
-.portfolio-piece__info {
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 2rem;
-  order: 1;
-}
-
-.portfolio-piece__image-wrap {
-  flex: 2 1 0;
-  min-width: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  order: 2;
-}
-
-.portfolio-piece__image-wrap a {
+.portfolio-piece__image-link {
   display: block;
-  cursor: pointer;
   line-height: 0;
 }
 
 .portfolio-piece__image {
-  max-width: 100%;
-  max-height: 85vh;
-  width: auto;
+  width: 100%;
+  max-height: 90vh;
   height: auto;
   object-fit: contain;
+  display: block;
+  background: #fff;
 }
 
 .portfolio-piece__image--la-choza-de-azucar {
-  max-width: 115%;
   max-height: 95vh;
 }
 
 .portfolio-piece__image--like-what-you-see {
-  max-width: 110%;
-  max-height: 90vh;
+  max-height: 95vh;
+}
+
+.portfolio-piece__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 90%;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}
+
+.portfolio-piece__overlay > * {
+  pointer-events: auto;
 }
 
 .portfolio-piece__title {
@@ -148,83 +140,109 @@ body.edit-mode .page__content > * {
   line-height: 1.5;
 }
 
-.portfolio-piece__next {
-  display: inline-block;
-  text-decoration: underline;
-  font-weight: 600;
-  color: #000 !important;
-}
-
-@media (max-width: 600px) {
-  .portfolio-piece,
-  .painting-block {
-    flex-wrap: wrap;
-  }
-  .portfolio-piece__info,
-  .painting-block .portfolio-piece__info {
-    flex-basis: 100%;
-    text-align: center;
-  }
-  .portfolio-piece__image-wrap,
-  .painting-block .portfolio-piece__image-wrap {
-    flex-basis: 100%;
-  }
-}
-
-.paintings-scroll {
+.portfolio-piece__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3rem;
+  height: 3rem;
   display: flex;
-  flex-direction: column;
-}
-
-.painting-block {
-  display: flex;
-  flex-wrap: nowrap;
   align-items: center;
-  gap: 2rem;
-  padding: 3rem 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.painting-block .portfolio-piece__info {
-  order: 1 !important;
-}
-
-.painting-block .portfolio-piece__image-wrap {
-  order: 2 !important;
-}
-
-.painting-block:last-child {
-  border-bottom: none;
-}
-
-.paintings-index__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.paintings-index__item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  color: #000 !important;
+  font-size: 2rem;
+  line-height: 1;
   text-decoration: none;
 }
 
-.paintings-index__item img {
-  width: 100%;
+.portfolio-piece__arrow:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.portfolio-piece__arrow--prev {
+  left: 1rem;
+}
+
+.portfolio-piece__arrow--next {
+  right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .portfolio-piece__overlay {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .portfolio-piece__arrow {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.5rem;
+  }
+}
+
+.paintings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.paintings-grid__item {
+  position: relative;
+  display: block;
+  overflow: hidden;
   aspect-ratio: 1 / 1;
-  object-fit: cover;
+  text-decoration: none;
   background: #fff;
 }
 
-.paintings-index__item,
-.paintings-index__title {
-  color: #000 !important;
+.paintings-grid__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.paintings-index__title {
+.paintings-grid__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.paintings-grid__item:hover .paintings-grid__overlay,
+.paintings-grid__item:focus .paintings-grid__overlay {
+  opacity: 1;
+}
+
+.paintings-grid__title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.paintings-grid__note {
+  color: #fff;
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.paintings-grid__desc {
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .paintings-index__empty {

@@ -1,0 +1,13 @@
+<a class="paintings-grid__item" href="{{ include.piece.url | relative_url }}">
+  <img src="{{ include.piece.header.teaser | relative_url }}" alt="{{ include.piece.title }}">
+  <div class="paintings-grid__overlay">
+    <div class="paintings-grid__title">{{ include.piece.title }}</div>
+    {% if include.piece.note %}
+      <div class="paintings-grid__note">{{ include.piece.note }}</div>
+    {% endif %}
+    <div class="paintings-grid__desc">
+      {{ include.piece.medium }}, {{ include.piece.dimensions }}<br>
+      {{ include.piece.price }}
+    </div>
+  </div>
+</a>
