@@ -1,0 +1,68 @@
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('edit') !== '1') return;
+
+  document.body.classList.add('edit-mode');
+
+  var container = document.querySelector('.page__content');
+  if (!container) return;
+
+  var containerRect = container.getBoundingClientRect();
+  container.style.position = 'relative';
+  container.style.width = containerRect.width + 'px';
+  container.style.minHeight = (containerRect.height + 400) + 'px';
+
+  var boxes = Array.prototype.slice.call(container.children).filter(function (el) {
+    return el.tagName !== 'STYLE' && el.tagName !== 'SCRIPT';
+  });
+
+  boxes.forEach(function (el, i) {
+    var rect = el.getBoundingClientRect();
+    el.setAttribute('data-box-id', i);
+    el.classList.add('edit-box');
+    el.style.position = 'absolute';
+    el.style.left = (rect.left - containerRect.left) + 'px';
+    el.style.top = (rect.top - containerRect.top) + 'px';
+    el.style.margin = '0';
+
+    var dragging = false, startX, startY, origLeft, origTop;
+
+    el.addEventListener('mousedown', function (e) {
+      dragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      origLeft = parseFloat(el.style.left);
+      origTop = parseFloat(el.style.top);
+      el.classList.add('edit-box--active');
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', function (e) {
+      if (!dragging) return;
+      el.style.left = (origLeft + (e.clientX - startX)) + 'px';
+      el.style.top = (origTop + (e.clientY - startY)) + 'px';
+    });
+
+    document.addEventListener('mouseup', function () {
+      if (dragging) {
+        dragging = false;
+        el.classList.remove('edit-box--active');
+      }
+    });
+  });
+
+  var panel = document.createElement('div');
+  panel.className = 'edit-panel';
+  panel.innerHTML = '<button type="button" class="edit-export">Export Layout</button><textarea class="edit-output" readonly placeholder="Drag boxes, then click Export Layout"></textarea>';
+  document.body.appendChild(panel);
+
+  panel.querySelector('.edit-export').addEventListener('click', function () {
+    var css = boxes.map(function (el, i) {
+      return '.page__content [data-box-id="' + i + '"] { position: absolute; left: ' + el.style.left + '; top: ' + el.style.top + '; }';
+    }).join('\n');
+    panel.querySelector('.edit-output').value = css;
+    panel.querySelector('.edit-output').select();
+  });
+})();
+</script>
