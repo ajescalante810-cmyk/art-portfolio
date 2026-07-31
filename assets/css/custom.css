@@ -220,7 +220,7 @@ body.edit-mode .page__content > * {
   text-align: center;
   padding: 1rem;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
 }
 
 .paintings-grid__item:hover .paintings-grid__overlay,
