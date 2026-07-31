@@ -172,9 +172,11 @@ body.edit-mode .page__content > * {
 
 @media (max-width: 600px) {
   .portfolio-piece__overlay {
+    position: static;
     max-width: 100%;
     width: 100%;
     padding: 1rem;
+    background: #fff;
   }
 
   .portfolio-piece__arrow {
