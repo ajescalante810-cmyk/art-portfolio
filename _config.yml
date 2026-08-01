@@ -1,8 +1,8 @@
 title: Alexander Escalante Art
 name: Alexander Escalante
 description: Paintings by Alexander (AJ) Escalante
-url: "https://ajescalante810-cmyk.github.io"
-baseurl: "/art-portfolio"
+url: "https://alexanderescalante.com"
+baseurl: ""
 
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
