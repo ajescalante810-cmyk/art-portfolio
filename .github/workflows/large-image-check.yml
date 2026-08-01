@@ -1,0 +1,34 @@
+name: Large Image Check
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # every Monday 9am UTC
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find images over 2MB
+        id: find
+        run: |
+          FILES=$(find assets/images -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -size +2M -exec ls -lh {} \; | awk '{print $5, $9}')
+          echo "files<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$FILES" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Open issue if large images found
+        if: steps.find.outputs.files != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Large images found ($(date +%F))" \
+            --label "housekeeping" \
+            --body "These images are over 2MB and could be compressed for faster page loads:
+
+          \`\`\`
+          ${{ steps.find.outputs.files }}
+          \`\`\`"
