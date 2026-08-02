@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Artist Biography"
+description: "Biography of painter Alexander (AJ) Escalante, whose work explores memory, cultural identity, and the intersection of figuration and abstraction."
 permalink: /about/
 author_profile: false
 hide_pagination: true

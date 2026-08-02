@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Curriculum Vitae"
+description: "Education, exhibitions, awards, and press for painter Alexander (AJ) Escalante."
 permalink: /cv/
 author_profile: false
 hide_pagination: true

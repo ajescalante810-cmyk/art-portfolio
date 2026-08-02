@@ -1,14 +1,26 @@
 title: Alexander Escalante
 name: Alexander Escalante
-description: Paintings by Alexander (AJ) Escalante
+description: Paintings by Alexander (AJ) Escalante — a painter working at the intersection of memory, cultural identity, and abstraction.
 url: "https://alexanderescalante.com"
 baseurl: ""
+og_image: /assets/images/we-all-fall-down-2026.jpg
+
+twitter:
+  card: summary_large_image
+
+social:
+  name: Alexander Escalante
+  links:
+    - https://www.instagram.com/alexanderescalante.art
+    - https://youtube.com/@alexanderescalanteart
 
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
 plugins:
   - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 markdown: kramdown
 locale: en-US

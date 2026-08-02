@@ -6,6 +6,7 @@ medium: "Oil on canvas"
 dimensions: "36 x 96 inches"
 price: "For inquiries, contact the artist"
 order: 3
+description: "Taking Up Space, 2024. Oil on canvas, 36 x 96 inches. An original painting by Alexander (AJ) Escalante."
 header:
   teaser: /assets/images/taking-up-space-2024.jpg
 ---

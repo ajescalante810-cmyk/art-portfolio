@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Contact
+description: "Get in touch with painter Alexander Escalante or subscribe to the newsletter for updates on new work."
 permalink: /contact/
 author_profile: false
 hide_pagination: true

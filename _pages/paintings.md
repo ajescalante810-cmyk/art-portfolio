@@ -1,6 +1,7 @@
 ---
 layout: single
 title: Paintings
+description: "Browse original oil paintings by Alexander (AJ) Escalante, organized by year."
 permalink: /paintings/
 author_profile: false
 hide_pagination: true
