@@ -1,6 +1,6 @@
 * {
-  font-family: "Times New Roman", Times, serif !important;
-  font-weight: 800 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
 }
 
 img {
@@ -46,6 +46,10 @@ img {
 
 .site-title {
   color: #000 !important;
+  font-size: 2.25rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 0;
 }
 
 body.edit-mode .page__content > * {
@@ -292,8 +296,8 @@ body.edit-mode .page__content > * {
 }
 
 .paintings-years__link {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 800;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 2rem;
   text-decoration: none;
   color: #000 !important;
