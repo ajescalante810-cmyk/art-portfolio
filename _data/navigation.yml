@@ -5,8 +5,6 @@ main:
     url: /paintings/
   - title: "About"
     url: /about/
-  - title: "Statement"
-    url: /statement/
   - title: "CV"
     url: /cv/
   - title: "Contact"
