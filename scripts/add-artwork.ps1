@@ -99,7 +99,8 @@ header:
 ---
 "@
 
-Set-Content -Path $galleryFile -Value $frontMatter -Encoding utf8
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($galleryFile, $frontMatter, $utf8NoBom)
 
 Write-Host ""
 Write-Host "Created $galleryFile" -ForegroundColor Green
