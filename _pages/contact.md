@@ -66,7 +66,7 @@ hide_pagination: true
 
 <div class="newsletter-signup">
   <h3>Subscribe to the newsletter</h3>
-  <form action="https://alexanderescalante.us6.list-manage.com/subscribe/post?u=e742a58b9f2c3e47c45fff441&amp;id=baa34c20f4&amp;f_id=00c533e3f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+  <form action="https://alexanderescalante.us6.list-manage.com/subscribe/post?u=e742a58b9f2c3e47c45fff441&amp;id=baa34c20f4&amp;f_id=00c533e3f0" method="post" name="mc-embedded-subscribe-form" target="_blank" rel="noopener" novalidate>
     <label for="mce-EMAIL">Email Address</label>
     <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="you@example.com" required>
     <div aria-hidden="true" style="position: absolute; left: -5000px;">

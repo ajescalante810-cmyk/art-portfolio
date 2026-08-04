@@ -26,12 +26,14 @@ jobs:
         if: steps.find.outputs.files != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILES: ${{ steps.find.outputs.files }}
         run: |
+          BODY="These images are over 2MB and could be compressed for faster page loads:
+
+          \`\`\`
+          $FILES
+          \`\`\`"
           gh issue create \
             --title "Large images found ($(date +%F))" \
             --label "housekeeping" \
-            --body "These images are over 2MB and could be compressed for faster page loads:
-
-          \`\`\`
-          ${{ steps.find.outputs.files }}
-          \`\`\`"
+            --body "$BODY"
