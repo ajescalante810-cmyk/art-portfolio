@@ -23,7 +23,8 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --format markdown --output lychee-report.md './_site/**/*.html'
+          args: --no-progress --format markdown './_site/**/*.html'
+          output: lychee-report.md
           fail: false
 
       - name: Open issue if broken links found
