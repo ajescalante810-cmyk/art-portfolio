@@ -60,6 +60,7 @@ hide_pagination: true
 ## Selected Exhibitions
 {: .frozen-text }
 
+- 2026 — Artist and Curator: Thresholds - Connecticut College x Hygienic Art, Hygienic Art Galleries, New London, CT
 - 2026 — The Peace Room: Spring Show, Siena Art Institute, Siena, IT
 - 2026 — "The Undertaker," a ballet by Illarion Gershkovich, Royal College of Music, London, UK
 - 2026 — The Happening - The Peace Room 26, Palazzo delle Papesse, Siena, IT
@@ -105,7 +106,8 @@ hide_pagination: true
 ## Upcoming
 {: .frozen-text }
 
-- 2026 — Artist and Curator: Thresholds - Connecticut College x Hygienic Art, Hygienic Art Galleries, New London, CT
+- 2027 — Senior Art Major Thesis Exhibition, Cummings Art Center Gallery, New London, CT
+- 2027 — Artist and Curator: All-Student Show, Cummings Art Center Gallery, New London, CT
 {: .frozen-text }
 
 <script>
