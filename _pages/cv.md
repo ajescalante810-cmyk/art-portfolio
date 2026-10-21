@@ -60,14 +60,22 @@ hide_pagination: true
 ## Selected Exhibitions
 {: .frozen-text }
 
-- 2026 — Artist and Curator: Thresholds - Connecticut College x Hygienic Art, Hygienic Art Galleries, New London, CT
+- 2026 — Thresholds - Connecticut College x Hygienic Art, Hygienic Art Galleries, New London, CT
 - 2026 — The Peace Room: Spring Show, Siena Art Institute, Siena, IT
 - 2026 — "The Undertaker," a ballet by Illarion Gershkovich, Royal College of Music, London, UK
 - 2026 — The Happening - The Peace Room 26, Palazzo delle Papesse, Siena, IT
-- 2025 — Artist and Curator: Unbodied - In and Beyond the Human Form, Cummings Art Center Gallery, New London, CT
+- 2025 — Unbodied - In and Beyond the Human Form, Cummings Art Center Gallery, New London, CT
 - 2025 — Hygienic Grande, The Local Gallery, New London, CT
-- 2024, 2025 — Artist and Curator: All-Student Show, Cummings Art Center Gallery, New London, CT
+- 2024, 2025 — All-Student Show, Cummings Art Center Gallery, New London, CT
 - 2021, 2022 — Art Expressions of San Joaquin, Stockton, CA
+{: .frozen-text }
+
+## Curatorial Projects
+{: .frozen-text }
+
+- 2026 — Curatorial Director: Thresholds - Connecticut College x Hygienic Art, Hygienic Art Galleries, New London, CT
+- 2025 — Curator: Unbodied - In and Beyond the Human Form, Cummings Art Center Gallery, New London, CT
+- 2024, 2025 — Curator: All-Student Show, Cummings Art Center Gallery, New London, CT
 {: .frozen-text }
 
 ## Public Displays
