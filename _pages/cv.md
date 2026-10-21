@@ -94,6 +94,12 @@ hide_pagination: true
 - 2025 — Artist of the Edition: AJ Escalante '27 Break Boundaries, The College Voice, Connecticut College, New London, CT
 {: .frozen-text }
 
+## Teaching Experience
+{: .frozen-text }
+
+- 2026 (Fall) — Teaching Assistant, Introduction to Painting, Connecticut College, New London, CT
+{: .frozen-text }
+
 ## Student Activity
 {: .frozen-text }
 
