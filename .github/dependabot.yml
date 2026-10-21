@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # 0.3.x breaks the build on Ruby 3.2: github-pages pins liquid 4.0.3,
+      # which calls the removed String#tainted?. Revisit when github-pages
+      # moves to a newer liquid.
+      - dependency-name: "jekyll-include-cache"
+        versions: [">= 0.3.0"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
