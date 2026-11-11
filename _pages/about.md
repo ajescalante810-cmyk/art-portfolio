@@ -50,7 +50,7 @@ hide_pagination: true
 # Artist Biography
 {: .frozen-text }
 
-Alexander (AJ) Escalante (b. 2005) is a painter whose work explores memory, cultural identity, and the intersection of figuration and abstraction. Working primarily in oil, he develops layered, gestural surfaces where forms emerge and dissolve through accumulated mark-making, engaging painting as a site of perceptual ambiguity rather than fixed narrative.
+Alexander (AJ) Escalante (b. 2005) is a painter working between figuration and abstraction. His large-scale oil paintings begin with the human body, often drawn from his partner’s movement as a dancer, and break apart through layers of repeated marks. He pairs unexpected colors to build surfaces that are loud and full of movement, and he wants viewers to slow down and find their own way into the image.
 {: .frozen-text }
 
 A current fourth-year student pursuing a double major in Art and Neuroscience at Connecticut College, Escalante is the 2026 recipient of the Marguerite Hanson Art Grant from Connecticut College. He was recently nominated for the Yale Norfolk Summer of Art 2026.
